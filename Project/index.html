@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="utf-8">
+  <!-- Behavioral Meta Data -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>My New York City Guide</title>
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
+  <link rel="stylesheet" type="text/css" href="styles/indexstyles.css"/>
+
+</head>
+<body>
+
+  <div id="container" class="container">
+    <ul id="scene" class="scene border fill">
+      <li class="layer expand-width" data-depth="1.00"><button><a href="about.html">About</button></li>
+      <li class="layer expand-width" data-depth="0.80"><button><a href="events.html">Events</button></li>
+      <li class="layer expand-width" data-depth="0.60"><button><a href="bar.html">NightLife</button></li>
+      <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.00"><button><a href="food.html">Restaurants</a></button></li>
+    </ul>
+  </div>
+
+  <script src="../deploy/parallax.js"></script>
+  <script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+  </script>
+
+</body>
+</html>

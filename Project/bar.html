@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>NightLife</title>
+	<link rel="stylesheet" type="text/css" href="styles/stylebar.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
+  <script language="JavaScript" type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+
+</head> 
+<body>
+
+  <h1>   Where should I go out tonight?</h1>
+
+  <div id="container" class="container">
+    
+    <ul id="scene" class="scene border fill">
+      <li class="layer expand-width" data-depth="1.00"><button><a href="about.html">About</button></li>
+      <li class="layer expand-width" data-depth="0.80"><button><a href="events.html">Events</button></li>
+      <li class="layer expand-width" data-depth="0.60"><button><a href="food.html">Restaurants</button></li>
+      <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.00"><button><a href="index.html">Home</a></button></li>
+    </ul>
+  </div>
+
+    
+  <center><div id="target"></div></center> <!-- Instagram pictures here -->
+
+  <script src="../deploy/parallax.js"></script>
+  <script>
+    var scene = document.getElementById('scene');
+    var parallax = new Parallax(scene);
+  </script>
+
+ 
+  <center>
+  <form id="bar-form">
+    <div class="item text">
+        <label>Name</label>
+        <div class="field"><input type="text" name="name" /></div>
+    </div>
+    <div class="item text">
+        <label>Rating</label>
+        <div class="field"><input type="text" name="rating" /></div>
+    </div>
+    <div class="item text">
+        <label>Comment</label>
+        <div class="field"><input type="text" name="comment" /></div>
+    </div>
+    <div class="button-wrapper">
+        <div class="item button">
+          <div class="field"><input type="button" id="bar-op-discard" value="Discard" /></div>
+        </div>
+        <div class="item button button-default">
+          <div class="field"><input type="submit" id="bar-op-save" value="Save" /></div>
+        </div>
+    </div>
+    <input type="hidden" name="id_entry" value="0" />
+  </form>
+
+   <table id="bar-table">
+      <tr id="bar-head">
+        <th>#</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Comment</th>
+      </tr>
+  </table>
+	</center>
+
+
+	<script src="scripts/nightlife.js"></script>
+  <script src="scripts/instaBar.js"></script>
+
+	
+</body>
+
+</html>

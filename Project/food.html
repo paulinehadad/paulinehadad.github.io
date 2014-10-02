@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>Food</title>
+	<link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
+  <script language="JavaScript" type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
+
+</head> 
+<body>
+
+    <h1>   Where should I eat?</h1>
+
+
+  <div id="container" class="container">
+    
+    <ul id="scene" class="scene border fill">
+      <li class="layer expand-width" data-depth="1.00"><button><a href="about.html">About</button></li>
+      <li class="layer expand-width" data-depth="0.80"><button><a href="events.html">Events</button></li>
+      <li class="layer expand-width" data-depth="0.60"><button><a href="bar.html">NightLife</button></li>
+      <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
+      <li class="layer expand-width" data-depth="0.00"><button><a href="index.html">Home</a></button></li>
+    </ul>
+  </div>
+    
+    <center><div id="target"></div></center> <!-- Instagram pictures here -->
+
+
+  <!-- Scripts -->
+  <script src="../deploy/parallax.js"></script>
+  <script>
+
+ 
+  var scene = document.getElementById('scene');
+  var parallax = new Parallax(scene);
+
+  </script>
+
+ 
+<center>
+<form id="food-form">
+    <div class="item text">
+        <label>Name</label>
+        <div class="field"><input type="text" name="name" /></div>
+    </div>
+    <div class="item text">
+        <label>Rating</label>
+        <div class="field"><input type="text" name="rating" /></div>
+    </div>
+    <div class="item text">
+        <label>Comment</label>
+        <div class="field"><input type="text" name="comment" /></div>
+    </div>
+    <div class="button-wrapper">
+        <div class="item button">
+            <div class="field"><input type="button" id="food-op-discard" value="Discard" /></div>
+        </div>
+        <div class="item button button-default">
+            <div class="field"><input type="submit" id="food-op-save" value="Save" /></div>
+        </div>
+    </div>
+    <input type="hidden" name="id_entry" value="0" />
+</form>
+
+   <table id="food-table">
+        <tr id="food-head">
+        <th>#</th>
+        <th>Name</th>
+        <th>Rating</th>
+        <th>Comment</th>
+    </tr>
+</table>
+	</center>
+	<script src="scripts/guide.js"></script>
+  <script src="scripts/insta.js"></script>
+
+
+	
+</body>
+
+</html>

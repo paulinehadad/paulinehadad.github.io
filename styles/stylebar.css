@@ -1,0 +1,226 @@
+a { 
+  color: #000; 
+  cursor: pointer; 
+}
+
+a:link, a:visited { 
+  text-decoration: none; 
+  color: #000; 
+}
+
+a:hover, a:active { 
+  text-decoration: underline; 
+  color: #000; 
+}
+
+#bar-table { 
+  border-collapse: collapse; 
+}
+
+#bar-table, #bar-table th, #bar-table td { 
+  padding: 8px 80px; 
+  text-align: left; 
+  border: 0px solid #B9BABE; 
+}
+
+#bar-table th { 
+  font-weight: bold; 
+  font-size: 14px; 
+  color: #000; 
+}
+
+#bar-table td { 
+  color: #000; 
+}
+
+#bar-table tr:nth-child(2n) { 
+  background: #E8EDFF; 
+}
+
+#bar-form { 
+  padding: 10px; 
+}
+
+.text input, .button input { 
+  padding: 5px; 
+  margin: 0; 
+  border: 1px solid #ccc; 
+  -moz-border-radius: 2px; 
+  -webkit-border-radius: 2px; 
+  border-radius: 2px; 
+}
+
+#bar-form .item { 
+  margin: 3px 0; 
+}
+
+#bar-form label, #bar-form .field { 
+  display: inline-block; 
+  color: #0C0B07; 
+}
+
+#bar-form label { 
+  width: 110px; 
+  font-weight: bold; 
+  text-align: right; 
+  color: #000; 
+}
+
+#bar-form .text input { 
+  width: 176px; 
+  padding: 3px; 
+}
+
+#bar-form .button { 
+  display: inline-block; 
+}
+
+#bar-form .button-wrapper { 
+  padding-left: 113px; 
+}
+
+.button input { 
+  padding: 4px 8px; 
+  color: #343434; 
+  background-color: #fdfdfd; 
+  background: -moz-linear-gradient(#fdfdfd, #e1e1e1); 
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfd), to(#e1e1e1)); 
+}
+
+.button-default input { 
+  font-weight: bold; 
+  color: #fff; 
+  background-color: #7ca0c7; 
+  background: -moz-linear-gradient(#acc6e1, #7ca0c7); 
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#acc6e1), to(#7ca0c7)); 
+  border-color: #5b80b2; 
+}
+
+	
+h1 {
+  left: 20%;
+  font-size: 60px;
+}
+
+
+body {
+  font-family: 'Shadows Into Light Two';
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  background-image: url('nyc light.jpg');
+
+}
+
+
+input[type=checkbox] {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.4em 0;
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid #f6d751;
+  border-radius: 8px;
+  font-family: 'Shadows Into Light Two';
+  position: absolute;
+  line-height: 60px;
+  text-align: right;
+  padding: 0 1.2em;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  height: 40px;
+  width: 40%;
+  top: 1px;
+  margin: 0;
+  left: 100%;
+}
+
+button:hover {
+  background: #1B3F8B;
+}
+
+
+
+input[type=checkbox]:checked + label:before {
+  background: #1B3F8B;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.fill {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  top: 5%;
+}
+
+.expand-width {
+  width: 100%;
+}
+
+
+
+.aspect {
+  opacity: 0.2;
+}
+
+.layer:nth-child(1) {
+  opacity: 0.15;
+}
+.layer:nth-child(1) button {
+  -webkit-transform: rotate(150deg);
+}
+
+.layer:nth-child(2) {
+  opacity: 0.30;
+}
+.layer:nth-child(2) button {
+  -webkit-transform: rotate(120deg);
+}
+
+.layer:nth-child(3) {
+  opacity: 0.45;
+}
+.layer:nth-child(3) button {
+  -webkit-transform: rotate(90deg);
+}
+
+.layer:nth-child(4) {
+  opacity: 0.60;
+}
+.layer:nth-child(4) button {
+  -webkit-transform: rotate(60deg);
+}
+
+.layer:nth-child(5) {
+  opacity: 0.75;
+}
+.layer:nth-child(5) button {
+  -webkit-transform: rotate(30deg);
+}
+
+.layer:nth-child(6) {
+  opacity: 0.90;
+}
+.layer:nth-child(6) button {
+}

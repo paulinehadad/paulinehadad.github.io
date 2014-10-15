@@ -1,55 +1,48 @@
 <!doctype html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-	<title>About</title>
-	<link rel="stylesheet" type="text/css" href="styles/style.css">
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
-  <script language="JavaScript" type="text/javascript" src="scripts/jquery-1.11.1-1.js"></script>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="city-guide" content="Personal City Guide">
+    <meta name="keywords" content="guide,new york,food, events,nightlife">
+    <title>About</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/instafeed.min.js"></script>
+    <script type="text/javacript" src="scripts/instabout.js"></script>
+    <script src="source/parallax.js"></script>
+  </head> 
 
-</head> 
-<body>
+  <body>
+    <h1> About</h1>
+    <div id="container" class="container">
+      <ul id="scene" class="scene border fill">
+        <li class="layer expand-width" data-depth="1.00"><button><a href="bar.html">NighLife</button></li>
+        <li class="layer expand-width" data-depth="0.80"><button><a href="events.html">Events</button></li>
+        <li class="layer expand-width" data-depth="0.60"><button><a href="food.html">Restaurants</button></li>
+        <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
+        <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
+        <li class="layer expand-width" data-depth="0.00"><button><a href="index.html">Home</a></button></li>
+      </ul>
+    </div>
+   
+    <div id="feed"></div> <!-- Instagram pictures here -->
 
-  <h1> About</h1>
-
-
-  <div id="container" class="container">
+    <script>
+      var scene = document.getElementById('scene');
+      var parallax = new Parallax(scene);
+    </script>
+   
     
-    <ul id="scene" class="scene border fill">
-      <li class="layer expand-width" data-depth="1.00"><button><a href="bar.html">NighLife</button></li>
-      <li class="layer expand-width" data-depth="0.80"><button><a href="events.html">Events</button></li>
-      <li class="layer expand-width" data-depth="0.60"><button><a href="food.html">Restaurants</button></li>
-      <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
-      <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
-      <li class="layer expand-width" data-depth="0.00"><button><a href="index.html">Home</a></button></li>
-    </ul>
-  </div>
+    <b>Hi there! Welcome to your personal New York City guide. Here, you can enter information about food places, bar, clubs, or events that you've been to. Enter the name of the place, how much you liked it, and any extra comment you may have on the place! In each page, you;ll find the six most recent pictures posted on Instagram that are related to the specific page you're on.
 
-    
-  <center><div id="target"></div></center> <!-- Instagram pictures here -->
-
-  <script src="source/parallax.js"></script>
-  <script>
-    var scene = document.getElementById('scene');
-    var parallax = new Parallax(scene);
-  </script>
-
- 
-  
-  <b>Hi there! Welcome to your personal New York City guide. Here, you can enter information about food places, bar, clubs, or events that you've been to. Enter the name of the place, how much you liked it, and any extra comment you may have on the place! In each page, you;ll find the six most recent pictures posted on Instagram that are related to the specific page you're on.
-
-  This website was designed and programmed by Pauline Hadad, with the help of the following sources:
-  <ul>
-    <li>Instagram's API</li>
-    <li>Parallax.js</li>
-    <li>andris9/jStorage on GitHub</li>
-    <li>jsfiddle.net/3ERAT/24</li>
-  </ul></b>
-
-  <script src="scripts/nightlife.js"></script>
-  <script src="scripts/instabout.js"></script>
-	
-</body>
+    This website was designed and programmed by Pauline Hadad, with the help of the following sources:
+    <ul>
+      <li>Instagram's API</li>
+      <li>Parallax.js</li>
+      <li>andris9/jStorage on GitHub</li>
+      <li>jsfiddle.net/3ERAT/24</li>
+    </ul></b>
+  	
+  </body>
 </html>

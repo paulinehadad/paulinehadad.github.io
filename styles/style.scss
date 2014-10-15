@@ -1,0 +1,46 @@
+$font-stack:    Shadows Into Light Two;
+$primary-color: #000;
+
+a { 
+	color: $primary-color; 
+	cursor: pointer; 
+
+	link, visited { 
+ 	text-decoration: none; 
+  	color: $primary-color; 
+	}
+
+	hover, active { 
+  	text-decoration: underline; 
+  	color: $primary-color; 
+	}
+}
+
+#food-table { 
+  border-collapse: collapse; 
+
+  th, td {
+    padding: 8px 80px; 
+  	text-align: left; 
+  	border: 0px solid #B9BABE; 
+  }
+}
+
+#food-table, #food-table th, #food-table td { 
+
+}
+
+#food-table th { 
+  font-weight: bold; 
+  font-size: 14px; 
+  color: #000; 
+}
+
+#food-table td { 
+  color: #000; 
+}
+
+#food-table tr:nth-child(2n) { 
+  background: #E8EDFF; 
+}
+

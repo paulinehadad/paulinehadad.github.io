@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="city-guide" content="Personal City Guide">
     <meta name="keywords" content="guide,new york,events">
-  	<title>Events</title>
-  	<link rel="stylesheet" type="text/css" href="styles/style.css">
+    <title>Events</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two">
-    <script language="JavaScript" type="text/javascript" src="scripts/jquery-1.11.1.js"></script>
-    <script src="source/parallax.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    
     <script src="scripts/guide.js"></script>
     <script src="scripts/instaEvent.js"></script>
   </head> 
 
   <body>
+
     <h1>What should I do today?</h1>
-    <div id="container" class="container">  
+
+    <div id="container" class="container">
+    
       <ul id="scene" class="scene border fill">
         <li class="layer expand-width" data-depth="1.00"><button><a href="about.html">About</button></li>
         <li class="layer expand-width" data-depth="0.80"><button><a href="bar.html">NightLife</button></li>
@@ -26,14 +29,15 @@
       </ul>
     </div>
 
-    <center><div id="target"></div></center> <!-- Instagram pictures here -->
+    
+    <div id="target"></div> <!-- Instagram pictures here -->
 
+    <script src="scripts/parallax.js"></script>
     <script>
       var scene = document.getElementById('scene');
       var parallax = new Parallax(scene);
     </script>
 
-    <center>
     <form id="food-form">
       <div class="item text">
           <label>Name</label>
@@ -66,7 +70,7 @@
           <th>Comment</th>
         </tr>
     </table>
-  	</center>
+
   </body>
 
 </html>

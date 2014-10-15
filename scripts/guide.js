@@ -1,14 +1,3 @@
-
-var feed = new Instafeed({
-        get: 'tagged',
-        tagName: 'nycfood',
-        clientId: '40fd8ee862024a5d86ccca9bdd9c36da'
-});
-feed.run();
-    access_parameters = {
-        access_token: access_token
-    };
-
 var Food = {
     index: window.localStorage.getItem("food:index"),
     $table: document.getElementById("food-table"),

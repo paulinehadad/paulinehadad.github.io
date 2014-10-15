@@ -1,46 +1,275 @@
-$font-stack:    Shadows Into Light Two;
-$primary-color: #000;
-
-a { 
-	color: $primary-color; 
-	cursor: pointer; 
-
-	link, visited { 
- 	text-decoration: none; 
-  	color: $primary-color; 
-	}
-
-	hover, active { 
-  	text-decoration: underline; 
-  	color: $primary-color; 
-	}
+#target {
+  margin: 0 auto;
+  width: 75%;
+  border-radius: 50px;
+  border: 3px dotted #EDDA59;
+  overflow: hidden;
+  text-align: center;
 }
 
-#food-table { 
-  border-collapse: collapse; 
-
-  th, td {
-    padding: 8px 80px; 
-  	text-align: left; 
-  	border: 0px solid #B9BABE; 
+a {
+  &:link, &:visited {
+    text-decoration: none;
+    color: #000;
+  }
+  &:hover, &:active {
+    text-decoration: underline;
+    color: #000;
   }
 }
 
-#food-table, #food-table th, #food-table td { 
-
+#food-table {
+  border-collapse: collapse;
+  padding: 8px 80px;
+  text-align: center;
+  border: 0px solid #B9BABE;
+  th, td {
+    padding: 8px 80px;
+    text-align: center;
+    border: 0px solid #B9BABE;
+  }
+  th {
+    font-weight: bold;
+    font-size: 14px;
+    color: #000;
+  }
+  td {
+    color: #000;
+  }
+  tr:nth-child(2n) {
+    background: #E8EDFF;
+  }
 }
 
-#food-table th { 
-  font-weight: bold; 
-  font-size: 14px; 
-  color: #000; 
+#food-form {
+  padding: 10px;
 }
 
-#food-table td { 
-  color: #000; 
+.text input, .button input {
+  padding: 5px;
+  margin: 0;
+  border: 1px solid #ccc;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
 }
 
-#food-table tr:nth-child(2n) { 
-  background: #E8EDFF; 
+#food-form {
+  .item {
+    margin: 3px 0;
+  }
+  label, .field {
+    display: inline-block;
+    color: #0C0B07;
+  }
+  label {
+    width: 110px;
+    font-weight: bold;
+    text-align: right;
+    color: #000;
+  }
+  .text input {
+    width: 176px;
+    padding: 3px;
+  }
+  .button {
+    display: inline-block;
+  }
+  .button-wrapper {
+    padding-left: 113px;
+  }
 }
 
+.button input {
+  padding: 4px 8px;
+  color: #343434;
+  background-color: #fdfdfd;
+  background: -moz-linear-gradient(#fdfdfd, #e1e1e1);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#fdfdfd), to(#e1e1e1));
+}
+
+.button-default input {
+  font-weight: bold;
+  color: #fff;
+  background-color: #7ca0c7;
+  background: -moz-linear-gradient(#acc6e1, #7ca0c7);
+  background: -webkit-gradient(linear, 0 0, 0 100%, from(#acc6e1), to(#7ca0c7));
+  border-color: #5b80b2;
+}
+
+h1 {
+  left: 30%;
+  font-size: 60px;
+}
+
+body {
+  font-family: 'Shadows Into Light Two';
+  font-size: 18px;
+  color: #000;
+  margin: 0;
+  background-image: url('nyc light.jpg');
+}
+
+label {
+  display: inline-block;
+  margin-right: 1em;
+  padding: 0.4em 0;
+  cursor: pointer;
+}
+
+button {
+  border: 1px solid #f6d751;
+  border-radius: 8px;
+  font-family: 'Shadows Into Light Two';
+  position: absolute;
+  line-height: 60px;
+  text-align: right;
+  padding: 0 1.2em;
+  background: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+  outline: none;
+  height: 40px;
+  width: 40%;
+  top: 1px;
+  margin: 0;
+  left: 75%;
+  &:hover {
+    background: #1B3F8B;
+  }
+}
+
+input[type=checkbox]:checked + label:before {
+  background: #1B3F8B;
+}
+
+.container {
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.scene {
+  padding: 0;
+  margin: 0;
+}
+
+.fill {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  left: 5%;
+  top: 5%;
+}
+
+.expand-width {
+  width: 100%;
+}
+
+.aspect {
+  opacity: 0.2;
+}
+
+.layer {
+  &:nth-child(1) {
+    opacity: 0.15;
+    button {
+      -webkit-transform: rotate(150deg);
+    }
+  }
+  &:nth-child(2) {
+    opacity: 0.30;
+    button {
+      -webkit-transform: rotate(120deg);
+    }
+  }
+  &:nth-child(3) {
+    opacity: 0.45;
+    button {
+      -webkit-transform: rotate(90deg);
+    }
+  }
+  &:nth-child(4) {
+    opacity: 0.60;
+    button {
+      -webkit-transform: rotate(60deg);
+    }
+  }
+  &:nth-child(5) {
+    opacity: 0.75;
+    button {
+      -webkit-transform: rotate(30deg);
+    }
+  }
+  &:nth-child(6) {
+    opacity: 0.90;
+    button! {}
+  }
+}
+
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  /* Force table to not be like tables anymore */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  /* Hide table headers (but not display: none;, for accessibility) */
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr {
+    border: 1px solid #ccc;
+  }
+  td {
+    /* Behave  like a "row" */
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    &:before {
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+    }
+    &:nth-of-type(1):before {
+      content: "ID";
+    }
+    &:nth-of-type(2):before {
+      content: "Name";
+    }
+    &:nth-of-type(3):before {
+      content: "Rating";
+    }
+    &:nth-of-type(4):before {
+      content: "Comment";
+    }
+  }
+  /*
+  Label the data
+  */
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  body {
+    padding: 0;
+    margin: 0;
+    width: 320px;
+  }
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  body {
+    width: 495px;
+  }
+}

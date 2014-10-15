@@ -1,4 +1,4 @@
-#feed {
+#target {
   margin: 0 auto;
   width: 75%;
   border-radius: 50px;
@@ -6,10 +6,7 @@
   overflow: hidden;
   text-align: center;
 }
-a { 
-  color: #000; 
-  cursor: pointer; 
-}
+
 
 a:link, a:visited { 
   text-decoration: none; 
@@ -21,13 +18,13 @@ a:hover, a:active {
   color: #000; 
 }
 
-#food-table { 
+#food-table {
   border-collapse: collapse; 
 }
 
 #food-table, #food-table th, #food-table td { 
   padding: 8px 80px; 
-  text-align: left; 
+  text-align: center; 
   border: 0px solid #B9BABE; 
 }
 
@@ -47,6 +44,7 @@ a:hover, a:active {
 
 #food-form { 
   padding: 10px; 
+
 }
 
 .text input, .button input { 
@@ -106,7 +104,7 @@ a:hover, a:active {
 
 	
 h1 {
-  left: 20%;
+  left: 30%;
   font-size: 60px;
 }
 
@@ -121,9 +119,6 @@ body {
 }
 
 
-input[type=checkbox] {
-  display: none;
-}
 
 label {
   display: inline-block;
@@ -149,7 +144,7 @@ button {
   width: 40%;
   top: 1px;
   margin: 0;
-  left: 100%;
+  left: 75%;
 }
 
 button:hover {
@@ -185,8 +180,6 @@ input[type=checkbox]:checked + label:before {
 .expand-width {
   width: 100%;
 }
-
-
 
 .aspect {
   opacity: 0.2;
@@ -232,3 +225,65 @@ input[type=checkbox]:checked + label:before {
 }
 .layer:nth-child(6) button {
 }
+
+@media only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+    
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+    }
+    
+    /*
+    Label the data
+    */
+    td:nth-of-type(1):before { content: "ID"; }
+    td:nth-of-type(2):before { content: "Name"; }
+    td:nth-of-type(3):before { content: "Rating"; }
+    td:nth-of-type(4):before { content: "Comment"; }
+  }
+  
+  /* Smartphones (portrait and landscape) ----------- */
+  @media only screen
+  and (min-device-width : 320px)
+  and (max-device-width : 480px) {
+    body { 
+      padding: 0; 
+      margin: 0; 
+      width: 320px; }
+    }
+  
+  /* iPads (portrait and landscape) ----------- */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    body { 
+      width: 495px; 
+    }
+  }

@@ -18,21 +18,21 @@ function grabImages(tag, count, access_parameters) {
 }
 
 function onDataLoaded(instagram_data) {
-    var target = $("#target");
+    var galleria = $("#galleria");
     if (instagram_data.meta.code == 200) {
         var photos = instagram_data.data;
         if (photos.length > 0) {
-            target.empty();
+            galleria.empty();
             for (var key in photos) {
                 var photo = photos[key];
-                target.append('<a href="' + photo.link + '"><img src="' + photo.images.thumbnail.url + '"></a>')
+                galleria.append('<a href="' + photo.link + '"><img src="' + photo.images.thumbnail.url + '"></a>')
             }
         } else {
-            target.html("nothing found");
+            galleria.html("nothing found");
         }
     } else {
         var error = instagram_data.meta.error_message;
-        target.html(error);
+        galleria.html(error);
     }
 }
 

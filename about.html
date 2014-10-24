@@ -7,10 +7,14 @@
     <meta name="keywords" content="guide,new york,food, events,nightlife">
     <title>About</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/galleria.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="scripts/parallax.js"></script>
-    <script src="scripts/instabout.js"></script>
+
+    <script src="scripts/galleria-1.4.2.min.js"></script>
+    <script type="text/javascript" src="scripts/instafeed.min.js"></script>
+      <script type="text/javascript" src="scripts/script3.js"></script>
 
   </head> 
 
@@ -20,7 +24,7 @@
     <h1> About</h1>
 
     <!--Navigation bar -->
-    <div id="container" class="container">
+      <div id="container" class="container">
     
       <ul id="scene" class="scene border fill">
         <li class="layer expand-width" data-depth="1.00"><button><a href="bar.html">NighLife</button></li>
@@ -33,11 +37,32 @@
     
     </div>
 
-    
-    <div id="target"></div> <!-- Instagram pictures -->
+    <div id="galleria">
+            <img 
+                    src="styles/nyc1.jpg">
+            <img 
+                    src="styles/nyc2.jpg">
+                    <img 
+                    src="styles/nyc3.jpg">
+                    <img 
+                    src="styles/nyc4.jpg">
+                    <img 
+                    src="styles/nyc5.jpg">
+
+                      <div id="instafeed"></div>
+    </div>
+ 
+    <script>
+
+    // Load the classic theme
+    Galleria.loadTheme('scripts/galleria.classic.min.js');
+
+    // Initialize Galleria
+    Galleria.run('#galleria');
+   
 
   
-    <script>
+    
       var scene = document.getElementById('scene');
       var parallax = new Parallax(scene);
     </script>

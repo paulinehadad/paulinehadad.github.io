@@ -157,9 +157,9 @@ input[type=checkbox]:checked + label:before {
   background: #1B3F8B;
 }
 
-.container {
+#container {
   position: relative;
-  max-width: 600px;
+  width: 80%;
   margin: 0 auto;
   padding: 5%;
 }
@@ -287,3 +287,6 @@ input[type=checkbox]:checked + label:before {
       width: 495px; 
     }
   }
+
+
+  

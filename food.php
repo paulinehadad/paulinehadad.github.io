@@ -43,7 +43,7 @@
     </script>
 <script src="scripts/insta.js"></script>
    
-     <form method="post" action="food.html" enctype="multipart/form-data" >
+     <form method="post" action="food.php" enctype="multipart/form-data" >
             Name: <input type="text" name="name"><br>
             Rating: <input type="text" name="rating"><br>
             Comment:<br><textarea rows="5" name="comment" cols="30"></textarea><br>

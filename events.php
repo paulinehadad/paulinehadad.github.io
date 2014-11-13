@@ -5,8 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="city-guide" content="Personal City Guide">
-    <meta name="keywords" content="guide,new york,food">
-    <title>Food</title>
+    <meta name="keywords" content="guide,new york,events">
+    <title>Events</title>
     <link rel="stylesheet" type="text/css" href="styles/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Shadows+Into+Light+Two" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
@@ -15,13 +15,13 @@
 
   <body>
 
-    <h1>Where should I eat?</h1>
+    <h1>What should I do today?</h1>
 
     <div id="container" class="container">
     
       <ul id="scene" class="scene border fill">
         <li class="layer expand-width" data-depth="1.00"><button><a href="about.html">About</button></li>
-        <li class="layer expand-width" data-depth="0.80"><button><a href="events.php">Events</button></li>
+        <li class="layer expand-width" data-depth="0.80"><button><a href="food.php">Events</button></li>
         <li class="layer expand-width" data-depth="0.60"><button><a href="bar.php">NightLife</button></li>
         <li class="layer expand-width" data-depth="0.40"><button><a href="#"></button></li>
         <li class="layer expand-width" data-depth="0.20"><button><a href="#"></button></li>
@@ -41,8 +41,8 @@
     var parallax = new Parallax(scene);
 
     </script>
-
-<script src="scripts/insta.js"></script>
+    
+<script src="scripts/instaEvents.js"></script>
    
     
     <div id="target"></div> <!-- Instagram pictures here -->
@@ -68,7 +68,7 @@ $value1 = $_POST['name'];
 $value2 = $_POST['rating'];
 $value3 = $_POST['comment'];
 
-$sql = "INSERT INTO food (name, rating, comment)
+$sql = "INSERT INTO events (name, rating, comment)
 VALUES ('$value1', '$value2', '$value3')";
 
 if ($conn->query($sql) === TRUE) {

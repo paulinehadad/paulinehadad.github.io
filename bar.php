@@ -50,10 +50,10 @@
 <?php
 
 // DB connection info
-$host = "localhost";
-$user = "root";
-$pwd = "root";
-$db = "cityguide";
+$host = "a.parsons.edu";
+$user = "hadap176";
+$pwd = "wR2f=EcrU";
+$db = "hadap176";
 
 // Create connection
 $conn = new mysqli($host, $user, $pwd, $db);
@@ -109,6 +109,8 @@ function test_input($data) {
    $data = htmlspecialchars($data);
    return $data;
 }
+
+
 ?>
 
 <h2></h2>
@@ -132,12 +134,20 @@ Rating:
 </form>
 
 <?php
-echo "<h2>Your Input:</h2>";
-echo $value1;
-echo "<br>";
-echo $value2;
-echo "<br>";
-echo $value3;
+$sql = "SELECT name, rating, comment FROM nightlife";
+$result = $conn->query($sql);
+
+
+if ($result->num_rows > 0) {
+     echo "<table><tr><th>Name</th><th>Rating</th><th>Comment</th></tr>";
+     // output data of each row
+     while($row = $result->fetch_assoc()) {
+         echo "<tr><td>" . $row["name"]. "</td><td>" . $row["rating"]. "</td><td>" . $row["comment"]. "</td></tr>";
+     }
+     echo "</table>";
+} else {
+     echo "0 results";
+}
 ?>
 
 </body>

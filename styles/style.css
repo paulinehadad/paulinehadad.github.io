@@ -1,3 +1,9 @@
+table, th, td {
+     border: 1px solid black;
+}
+
+ .error {color: #FF0000;}
+
 #target {
   margin: 0 auto;
   width: 75%;

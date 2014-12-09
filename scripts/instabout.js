@@ -1,7 +1,7 @@
 var access_token = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587",
     access_parameters = {
-        access_token: access_token
-    };
+    access_token: access_token
+};
 
 var form = $('#tagsearch');
 form.on('submit', function(ev) {
@@ -18,21 +18,21 @@ function grabImages(tag, count, access_parameters) {
 }
 
 function onDataLoaded(instagram_data) {
-    var galleria = $("#galleria");
+    var target = $("#target");
     if (instagram_data.meta.code == 200) {
         var photos = instagram_data.data;
         if (photos.length > 0) {
-            galleria.empty();
+            target.empty();
             for (var key in photos) {
                 var photo = photos[key];
-                galleria.append('<a href="' + photo.link + '"><img src="' + photo.images.thumbnail.url + '"></a>')
+                target.append('<a href="' + photo.link + '"><img src="' + photo.images.thumbnail.url + '"></a>')
             }
         } else {
-            galleria.html("nothing found");
+            target.html("nothing found");
         }
     } else {
         var error = instagram_data.meta.error_message;
-        galleria.html(error);
+        target.html(error);
     }
 }
 

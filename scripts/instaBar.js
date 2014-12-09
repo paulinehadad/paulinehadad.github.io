@@ -1,7 +1,7 @@
 var access_token = "16384709.6ac06b4.49b97800d7fd4ac799a2c889f50f2587",
     access_parameters = {
-        access_token: access_token
-    };
+    access_token: access_token
+};
 
 var form = $('#tagsearch');
 form.on('submit', function(ev) {

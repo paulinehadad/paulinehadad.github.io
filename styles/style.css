@@ -1,6 +1,23 @@
+.description {
+  padding: 50px;
+}
+
+.formclass {
+ padding: 50px; 
+}
+
 table, th, td {
      border: 1px solid black;
+
+    table-layout: fixed;
+    text-align: center;
+    width:70%; 
+    margin-left:15%; 
+    margin-right:15%;
+    padding: 10px;
+
 }
+
 
  .error {color: #FF0000;}
 
@@ -24,29 +41,7 @@ a:hover, a:active {
   color: #000; 
 }
 
-#food-table {
-  border-collapse: collapse; 
-}
 
-#food-table, #food-table th, #food-table td { 
-  padding: 8px 80px; 
-  text-align: center; 
-  border: 0px solid #B9BABE; 
-}
-
-#food-table th { 
-  font-weight: bold; 
-  font-size: 14px; 
-  color: #000; 
-}
-
-#food-table td { 
-  color: #000; 
-}
-
-#food-table tr:nth-child(2n) { 
-  background: #E8EDFF; 
-}
 
 #food-form { 
   padding: 10px; 
@@ -110,7 +105,7 @@ a:hover, a:active {
 
 	
 h1 {
-  left: 30%;
+  padding: 10px;
   font-size: 60px;
 }
 
@@ -177,10 +172,10 @@ input[type=checkbox]:checked + label:before {
 
 .fill {
   position: absolute;
-  bottom: 5%;
+  bottom: 0%;
   right: 5%;
-  left: 5%;
-  top: 5%;
+  left: 45%;
+  top: 90%;
 }
 
 .expand-width {
@@ -232,50 +227,7 @@ input[type=checkbox]:checked + label:before {
 .layer:nth-child(6) button {
 }
 
-@media only screen and (max-width: 760px),
-  (min-device-width: 768px) and (max-device-width: 1024px)  {
-  
-    /* Force table to not be like tables anymore */
-    table, thead, tbody, th, td, tr { 
-      display: block; 
-    }
-    
-    /* Hide table headers (but not display: none;, for accessibility) */
-    thead tr { 
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
-    }
-    
-    tr { border: 1px solid #ccc; }
-    
-    td { 
-      /* Behave  like a "row" */
-      border: none;
-      border-bottom: 1px solid #eee; 
-      position: relative;
-      padding-left: 50%; 
-    }
-    
-    td:before { 
-      /* Now like a table header */
-      position: absolute;
-      /* Top/left values mimic padding */
-      top: 6px;
-      left: 6px;
-      width: 45%; 
-      padding-right: 10px; 
-      white-space: nowrap;
-    }
-    
-    /*
-    Label the data
-    */
-    td:nth-of-type(1):before { content: "ID"; }
-    td:nth-of-type(2):before { content: "Name"; }
-    td:nth-of-type(3):before { content: "Rating"; }
-    td:nth-of-type(4):before { content: "Comment"; }
-  }
+
   
   /* Smartphones (portrait and landscape) ----------- */
   @media only screen
